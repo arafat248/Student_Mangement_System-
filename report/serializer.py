@@ -1,7 +1,9 @@
 from rest_framework import serializers
-from report.models import Report
 
-class report_serial(serializers.ModelSerializer):
-    class Meta:
-        model = Report
-        fields = '__all__'
+class ReportSerializer(serializers.Serializer):
+    name = serializers.CharField()
+    roll = serializers.IntegerField()
+    class_name = serializers.CharField()
+    average_marks = serializers.FloatField()
+    grade = serializers.CharField()
+    subjects = serializers.ListField()
