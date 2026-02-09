@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-class ReportSerializer(serializers.Serializer):
+class report_serial(serializers.Serializer):
     name = serializers.CharField()
     roll = serializers.IntegerField()
     class_name = serializers.CharField()
